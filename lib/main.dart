@@ -27,7 +27,6 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageWidget extends State<HomePage> {
-
   Widget Button(BuildContext context, String color, String text, String idCod) {
     return GestureDetector(
       child: Container(
