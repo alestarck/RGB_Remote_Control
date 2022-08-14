@@ -27,12 +27,9 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageWidget extends State<HomePage> {
-  void initState() {
-    super.initState();
-  }
 
   Widget Button(BuildContext context, String color, String text, String idCod) {
-    return RawMaterialButton(
+    return GestureDetector(
       child: Container(
         width: MediaQuery.of(context).size.width * 0.18,
         height: MediaQuery.of(context).size.height * 0.08,
@@ -47,7 +44,7 @@ class HomePageWidget extends State<HomePage> {
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
         )),
       ),
-      onPressed: () {
+      onTap: () {
         Remote().SetRemote(idCod);
       },
     );
@@ -68,7 +65,8 @@ class HomePageWidget extends State<HomePage> {
             height: MediaQuery.of(context).size.height * 0.75,
             decoration: const BoxDecoration(
                 color: Colors.white60,
-                borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                border: Border(top: BorderSide.none, bottom: BorderSide.none)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
