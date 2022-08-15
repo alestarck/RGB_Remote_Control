@@ -27,7 +27,8 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageWidget extends State<HomePage> {
-  Widget Button(BuildContext context, String color, String text, String idCod) {
+  //
+  Widget Button(BuildContext context, String color, String text, double sizeText, String idCod) {
     return GestureDetector(
       child: Container(
         width: MediaQuery.of(context).size.width * 0.18,
@@ -35,12 +36,12 @@ class HomePageWidget extends State<HomePage> {
         margin: const EdgeInsets.only(bottom: 0, left: 12, right: 0, top: 10),
         decoration: BoxDecoration(
             color: Color(int.parse(color)),
-            borderRadius: BorderRadius.all(Radius.circular(50.0))),
+            borderRadius: const BorderRadius.all(Radius.circular(50.0))),
         child: Center(
             child: Text(
           text,
-          style: const TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: sizeText),
         )),
       ),
       onTap: () {
@@ -72,55 +73,55 @@ class HomePageWidget extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Button(context, "0xFFFEFEFF", "+", "+"),
-                    Button(context, "0xFFFEFEFF", "-", "-"),
-                    Button(context, "0xFF212029", "OFF", "OFF"),
-                    Button(context, "0xFFFEF2D32", "ON", "ON"),
+                    Button(context, "0xFFFEFEFF", "+",22, "+"),
+                    Button(context, "0xFFFEFEFF", "-",22, "-"),
+                    Button(context, "0xFF212029", "OFF",22, "OFF"),
+                    Button(context, "0xFFFEF2D32", "ON",22, "ON"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Button(context, "0xFFEC2E33", "R", "R"),
-                    Button(context, "0xFF028048", "G", "G"),
-                    Button(context, "0xFF1A4CA5", "B", "B"),
-                    Button(context, "0xFFFEFEFF", "W", "W"),
+                    Button(context, "0xFFEC2E33", "R",22, "R"),
+                    Button(context, "0xFF028048", "G",22, "G"),
+                    Button(context, "0xFF1A4CA5", "B",22, "B"),
+                    Button(context, "0xFFFEFEFF", "W",22, "W"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Button(context, "0xFFED5432", "", "R1"),
-                    Button(context, "0xFF479E48", "", "G1"),
-                    Button(context, "0xFF1F89EB", "", "B1"),
-                    Button(context, "0xFF666E7E", "FLASH", "FLASH"),
+                    Button(context, "0xFFED5432", "",0, "R1"),
+                    Button(context, "0xFF479E48", "",0, "G1"),
+                    Button(context, "0xFF1F89EB", "",0, "B1"),
+                    Button(context, "0xFF666E7E", "FLASH",16, "FLASH"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Button(context, "0xFFE87928", "", "R2"),
-                    Button(context, "0xFF4CB6DD", "", "G2"),
-                    Button(context, "0xFF7A2155", "", "B2"),
-                    Button(context, "0xFF666E7E", "STROBE", "STROBE"),
+                    Button(context, "0xFFE87928", "",0, "R2"),
+                    Button(context, "0xFF4CB6DD", "",0, "G2"),
+                    Button(context, "0xFF7A2155", "",0, "B2"),
+                    Button(context, "0xFF666E7E", "STROBE",16, "STROBE"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Button(context, "0xFFEFBB4D", "", "R3"),
-                    Button(context, "0xFF029AD9", "", "G3"),
-                    Button(context, "0xFFAD1D5A", "", "B3"),
-                    Button(context, "0xFF666E7E", "FADE", "FADE"),
+                    Button(context, "0xFFEFBB4D", "",0, "R3"),
+                    Button(context, "0xFF029AD9", "",0, "G3"),
+                    Button(context, "0xFFAD1D5A", "",0, "B3"),
+                    Button(context, "0xFF666E7E", "FADE",16, "FADE"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Button(context, "0xFFF9E828", "", "R4"),
-                    Button(context, "0xFF0278B5", "", "G4"),
-                    Button(context, "0xFFD4517B", "", "B4"),
-                    Button(context, "0xFF666E7E", "SMOOTH", "SMOOTH"),
+                    Button(context, "0xFFF9E828", "",0, "R4"),
+                    Button(context, "0xFF0278B5", "",0, "G4"),
+                    Button(context, "0xFFD4517B", "",0, "B4"),
+                    Button(context, "0xFF666E7E", "SMOOTH",16, "SMOOTH"),
                   ],
                 ),
               ],
